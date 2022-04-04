@@ -99,10 +99,10 @@
     <div class="footer">
       <div class="webgl-logo"></div>
       <div class="fullscreen" onclick="gameInstance.SendMessage('WebXR', 'StartSession')"></div>
-      <div class="title">[SimpleWebXR]</div>
+      <div class="title">[NASA GRC - SimpleWebXR]</div>
     </div>
-    <div class="footer">See how it works on GitHub : <a
-        href="https://github.com/Rufus31415/Simple-WebXR-Unity">https://github.com/Rufus31415/Simple-WebXR-Unity</a>
+    <div class="footer">Contact Caleb Cram for questions : <a
+        href="https://www.linkedin.com/in/caleb-cram-developer">https://www.linkedin.com/in/caleb-cram-developer</a>
     </div>
   </div>
  
@@ -126,10 +126,337 @@
     </table>
   </div>
 
-   <!-- Footer samples -->
+   <!-- Footer samples 
    <iframe src="/webxr/webxr-carousel.html"
     onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
-    style="height:500px;width:100%;border:none;overflow:hidden;"></iframe>
+    style="height:500px;width:100%;border:none;overflow:hidden;"></iframe> -->
+	
+	<html><head><style>
+    /********************************
+    * Basics
+    *********************************/
+
+    ul {
+        margin: 0 0 1.5rem;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    svg {
+        fill: currentColor;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    img {
+        height: auto;
+        margin-bottom: .5rem;
+        max-width: calc(100% + 2rem);
+        position: relative;
+        left: -1rem;
+        right: -1rem;
+    }
+
+    p {
+        margin: 0 0 .5rem;
+    }
+
+
+    header {
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    .card {
+        border: 1px solid #bac6d3;
+        border-radius: 8px;
+        padding: 1rem;
+        height: 500px;
+        margin-top: 20px;
+        ;
+    }
+
+    .card:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        transition: 0.2s ease;
+    }
+
+    /********************************
+    * Carousel styles
+    *********************************/
+    .carousel-items {
+        display: flex;
+        overflow-x: scroll;
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory;
+        text-align: center;
+    }
+
+    .carousel-item {
+        flex: 1 0 250px;
+        margin-left: 1rem;
+        scroll-snap-align: start;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar {
+        height: 6px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #3d4852;
+        border-radius: 3px;
+    }
+
+    .carousel-item a {
+        color: #3d4852;
+        text-decoration: none;
+    }
+
+    .card-title {
+        height: 60px;
+    }
+
+    .card-selected {
+        border: 3px solid black;
+        transform: scale(1.03);
+        background-color: gainsboro;
+    }
+
+    /********************************
+    * Breakpoints
+    *********************************/
+    @media screen and (min-width: 576px) {
+        .carousel-item {
+            flex-basis: 300px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+
+        body,
+        button,
+        input,
+        select,
+        optgroup,
+        textarea {
+            font-size: 1.125rem;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+        }
+
+        .carousel-item {
+            flex-basis: 325px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        .carousel-item {
+            flex-basis: 450px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+
+        body,
+        button,
+        input,
+        select,
+        optgroup,
+        textarea {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+        var url = (window.location != window.parent.location) ? document.referrer : document.location.href;
+        var elementId = url.substr(0, url.length - 1).split("/").pop();
+        var card = document.querySelector("#" + elementId);
+        if (card) {
+            card.classList.add("card-selected")
+            card.scrollIntoView();
+            if (window.parent) window.parent.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+</script>
+
+</head><body><main>
+    <section class="carousel">
+        <ul class="carousel-items">
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-HandInteraction/" target="_parent">
+                    <div class="card" id="MRTK-HandInteraction">
+                        <h2 class="card-title">WebXR Hand Interaction</h2>
+                        <img src="/images/MRTK-HandInteraction.gif">
+                        <div class="card-content">
+                            <p>This MRTK example contains various types of interactions and UI controls that highlight
+                                articulated hand input. It demonstrates state 2D windows, bounding box and manipulation
+                                handlers.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Elastic-System/" target="_parent">
+                    <div class="card" id="MRTK-ElasticSystem">
+                        <h2 class="card-title">WebXR Elastic Menus</h2>
+                        <img src="/images/MRTK-ElasticSystem.gif">
+                        <div class="card-content">
+                            <p>MRTK example that shows elastic animations on menus. It also allows to manipulate objects
+                                with an elastic effect on scale, position and rotation.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-Spectatorview-Client/" target="_parent">
+                    <div class="card card-selected" id="SpectatorViewWebXRClient">
+                        <h2 class="card-title">WebXR Spectator View for Hololens</h2>
+                        <img src="/images/SpectatorViewWebXRClient.gif">
+                        <div class="card-content">
+                            <p>Spectator View allows others to see on a 2D screen what a HoloLens 2 user sees in their
+                                world.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-ColorPicker/" target="_parent">
+                    <div class="card" id="MRTK-ColorPicker">
+                        <h2 class="card-title">WebXR Color Picker</h2>
+                        <img src="/images/MRTK-ColorPicker.jpg">
+                        <div class="card-content">
+                            <p>Allow user to select a color on a palette.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/PainterWebXR_CalebsBuild/" target="_parent">
+                    <div class="card" id="PaintExample">
+                        <h2 class="card-title">WebXR Paint</h2>
+                        <img src="/images/PaintExample.gif">
+                        <div class="card-content">
+                            <p>A simple paint example where user can draw red line in space</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-HandDetection/" target="_parent">
+                    <div class="card" id="HandDetectionExample">
+                        <h2 class="card-title">WebXR Hand Detection</h2>
+                        <img src="/images/HandDetectionExample.gif">
+                        <div class="card-content">
+                            <p>Shows hand joints. Your device should have WebXR hand detection flags enabled.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Dock/" target="_parent">
+                    <div class="card" id="MRTK-Dock">
+                        <h2 class="card-title">WebXR Dock System</h2>
+                        <img src="/images/MRTK-Dock.jpg">
+                        <div class="card-content">
+                            <p>This MRTK example enables moving objects in and out of predetermined positions, to create
+                                palettes, shelves and navigation bars.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Hand-Coach/" target="_parent">
+                    <div class="card" id="MRTK-HandCoach">
+                        <h2 class="card-title">WebXR Hand Coach</h2>
+                        <img src="/images/MRTK-HandCoach.jpg">
+                        <div class="card-content">
+                            <p>Hand coach is 3D modeled hands that are triggered when the system does not detect the
+                                user’s hands. This is implemented as a “teaching” component that helps guide the user
+                                when the gesture has not been taught.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-HandMenuLayout/" target="_parent">
+                    <div class="card" id="MRTK-HandMenuLayout">
+                        <h2 class="card-title">WebXR Hand Menu</h2>
+                        <img src="/images/MRTK-HandMenuLayout.jpg">
+                        <div class="card-content">
+                            <p>Hand menus allow users to quickly bring up hand-attached UI for frequently used
+                                functions.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Material-Gallery/" target="_parent">
+                    <div class="card" id="MRTK-MaterialGallery">
+                        <h2 class="card-title">WebXR Material Gallery</h2>
+                        <img src="/images/MRTK-MaterialGallery.jpg">
+                        <div class="card-content">
+                            <p>All materials in this scene are using the MRTK/Standard shader.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Scrolling-Objects/" target="_parent">
+                    <div class="card" id="MRTK-ScrollingObjectCollection">
+                        <h2 class="card-title">WebXR Scrolling Menus</h2>
+                        <img src="/images/MRTK-ScrollingObjectCollection.jpg">
+                        <div class="card-content">
+                            <p>The MRTK scrolling object collection is an UX component that enables scrolling of 3D
+                                content through a contained viewable area.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="carousel-item">
+                <a href="https://calebcram.github.io/WebXR-MRTK-Solvers/" target="_parent">
+                    <div class="card" id="MRTK-Solver">
+                        <h2 class="card-title">WebXR Solvers</h2>
+                        <img src="/images/MRTK-Solver.jpg">
+                        <div class="card-content">
+                            <p>Solvers are components that facilitate the means of calculating an object's position &amp;
+                                orientation according to a predefine algorithm.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+	    <li class="carousel-item">
+                <a href="https://calebcram.github.io/AllInReality_WebXRDemo/" target="_parent">
+                    <div class="card" id="VR Environment Sample">
+                        <h2 class="card-title">VR Environment Sample</h2>
+                        <img src="/images/MRTK-Solver.jpg">
+                        <div class="card-content">
+                            <p>This is immersive VR environment with basic controller interactions built for WebXR.</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
+</body></html>
 
   <!-- The Modal popup -->
   <div id="modalPopup" class="modal">
