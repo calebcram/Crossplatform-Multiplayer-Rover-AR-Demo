@@ -38,19 +38,19 @@ Edit > Project Settings > Publishing Settings > WebGL Template > Select "WebXR_U
 - WebXR API Emulator on Computers
 
 Option 2 - Clone from my example:
-Download my custom version of the Simple WebXR project which should already have everything you need implemented here:
+1) Download my custom version of the Simple WebXR project which should already have everything you need implemented here:
 https://drive.google.com/file/d/1zGKi7He-ZQ6LkWiZwUHp4j0sklwUwqdT/view?usp=sharing
 2) Unzip the file and setup the unity project in a location of your choosing. 
 3) Open my SWXR (SimpleWebXR) project in Unity 2019.4.24 (Documentation indicates this works with newer versions of Unity but I've been unsuccessful)
 4) Switch the build platform to WebGL 
-File > Build Settings > Platform > Select WebXR and Switch Platform
+- File > Build Settings > Platform > Select WebXR and Switch Platform
 5) Set WebGL Template in project settings to "WebXR_Unity2019andBefore"
-Edit > Project Settings > Publishing Settings > WebGL Template > Select "WebXR_Unity2019andBefore"
+- Edit > Project Settings > Publishing Settings > WebGL Template > Select "WebXR_Unity2019andBefore"
 6) Create a WebGL Build of the project
-Edit > Build Settings > Select Build
+- Edit > Build Settings > Select Build
 7) Once complete double check if your build contains the JavaScript files (it should in my modified version of SWXR because I created a new WebGL template for WebXR that includes the missing JavaScript files from Rufus's original Simple Web XR sample)
-"webxr"
-"gl-matrix-min"
+- "webxr"
+- "gl-matrix-min"
 8) If you have the above files in your build, you are ready to proceed to the next step, if not, you must follow the steps below. Download my open source Unity package from GitHub containing the two missing JavaScript files listed above. Once downloaded, drag and drop the two JavaScript files into the top file structure of your WebGL project build (with the index file) and you should have everything you need to proceed.
 9) Upload your completed build files to a new GitHub repository (index and the above JavaScript files must not be inside of a folder) 
 10) Use GitHub pages to host your build in the Web with https enforced security. Also save the GitHub pages link in an easily accessible place like the readme file.
