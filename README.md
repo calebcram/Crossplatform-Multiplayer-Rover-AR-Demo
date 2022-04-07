@@ -86,6 +86,8 @@ Custom AR/VR Examples in WebXR:
 - HEMM in WebXR (MRTK Dockable interaction): https://calebcram.github.io/WebXR-HEMM/
 - JWST in WebXR (MRTK Dockable Interaction): https://calebcram.github.io/WebXR-JWST/
 - Photon MRTK Crossplatform Multiplayer Rover interaction Demo: https://calebcram.github.io/Crossplatform-Multiplayer-Rover-AR-Demo/
+
+![RoverWebXRLuminaryGIF_MultiUser](https://user-images.githubusercontent.com/49875750/162326453-66d04e90-f3a1-490b-ae60-712a253dc112.gif)
  
 Contact Caleb Cram for any questions.
 - LinkedIn: https://www.linkedin.com/in/caleb-cram-developer
