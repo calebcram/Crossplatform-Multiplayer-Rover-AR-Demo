@@ -4,7 +4,7 @@ This is the NASA Perseverance rover in an Augmented Realtiy experience hosted in
 ![RoverWebXRLuminaryGIF](https://user-images.githubusercontent.com/49875750/162324117-86edd156-6d24-4d34-8751-69273b69847a.gif)
 
 
-Requirements:
+**Requirements:**
 - Unity 2019.4.24f1 (Allegedly works up to 2020.3 LTS but I've only been successful with 2019.4LTS)
 Any XR enabled device and compatible XR enabled browser
 - Quest 1 & 2 (Native browser support)
@@ -66,7 +66,7 @@ https://drive.google.com/file/d/1zGKi7He-ZQ6LkWiZwUHp4j0sklwUwqdT/view?usp=shari
 
 ![RoverWebXRLuminaryGIF_Interactions](https://user-images.githubusercontent.com/49875750/162327386-1333b934-012c-48b1-8831-27a4ddacd35b.gif)
 
-Live Examples
+**Live Examples**
  
 MRTK Interaction Examples in WebXR:
 - MRTK All Samples in one WebXR Scene: https://calebcram.github.io/WebXR-AllMRTK-Samples/
@@ -91,7 +91,7 @@ Custom AR/VR Examples in WebXR:
 
 ![RoverWebXRLuminaryGIF_MultiUser](https://user-images.githubusercontent.com/49875750/162326453-66d04e90-f3a1-490b-ae60-712a253dc112.gif)
  
-Contact Caleb Cram for any questions.
+**Contact Caleb Cram for any questions.**
 - LinkedIn: https://www.linkedin.com/in/caleb-cram-developer
 - Portfolio: https://calebcram.dev/
 - GitHub: https://github.com/calebcram
