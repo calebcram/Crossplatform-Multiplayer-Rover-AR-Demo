@@ -1,6 +1,9 @@
 # Crossplatform-Multiplayer-Rover-AR-Demo
 This is the NASA Perseverance rover in an Augmented Realtiy experience hosted in the web. This was built in Unity with Photon Pun 2 for the mulitplayer neteworking and MRTK for the interactions on various device platforms and WebXR /WebGL to convert the project into a format compatible with the web. 
 
+![RoverWebXRLuminaryGIF](https://user-images.githubusercontent.com/49875750/162324117-86edd156-6d24-4d34-8751-69273b69847a.gif)
+
+
 Requirements:
 - Unity 2019.4.24f1 (Allegedly works up to 2020.3 LTS but I've only been successful with 2019.4LTS)
 Any XR enabled device and compatible XR enabled browser
