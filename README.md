@@ -39,6 +39,8 @@ Edit > Project Settings > Publishing Settings > WebGL Template > Select "WebXR_U
 - Android (Mobile phones and tablets)
 - WebXR API Emulator on Computers
 
+![HEMM_Multi_AnchoredQuest2](https://github.com/calebcram/Crossplatform-Multiplayer-Rover-AR-Demo/assets/49875750/a5fbea78-59ea-4821-9e21-60ec6928b9c2)
+
 **Option 2 - Clone from my example:**
 1) Download my custom version of the Simple WebXR project which should already have everything you need implemented here:
 https://drive.google.com/file/d/1zGKi7He-ZQ6LkWiZwUHp4j0sklwUwqdT/view?usp=sharing
